@@ -8,7 +8,50 @@
     <title>Lista de Produtos</title>
 </head>
 <body>
-    <h1>Hellow World!</h1>
+    <header>
+        <h1>Lista de Produtos</h1>
+    </header>
+    <main>
+        <div class="titulo">
+            <h2>Produtos</h2>
+            <span>Lista de Produtos da minha loja.</span>
+        </div>
+        <div class="card">
+            <div class="card-input">
+                <label>Produto</label>
+                <input type="text" name="nome-produto" id="nome-produto" placeholder="Nome Do Produto">
+            </div>
+            <div class="card-input">
+                <label>Preço</label>
+                <input type="text" name="valor-produto" id="valor-produto" placeholder="Valor Do Produto">
+            </div>
+            <div class="card-btns">
+                <button>Adicionar</button>
+                <button>Deletar</button>
+            </div>
+        </div>
+        <div class="table">
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Computador Gamer</td>
+                        <td>4.989,99</td>
+                        <td>
+                            <img src="https://cdn-icons.flaticon.com/png/512/4103/premium/4103111.png?token=exp=1658266431~hmac=c65e680c4bf9158bc9236efe33f1d888" alt="Editar">
+                            <img src="https://cdn-icons.flaticon.com/png/512/3138/premium/3138336.png?token=exp=1658266390~hmac=eef2d7e07c0cc951f99482e2d1c25756" alt="Deletar">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
     <script href="script1.js"></script>
 </body>
 </html>
