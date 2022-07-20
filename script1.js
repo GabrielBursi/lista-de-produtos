@@ -1,15 +1,17 @@
 class Produto{
     constructor(){
-
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor
     }
-    adicionar(){
-
+    salvar(){
+        alert("teste")
     }
-    deletar(){
+    cancelar(){
 
     }
     editar(){
 
     }
 }
-let produto = new Produto();
+var produto = new Produto();

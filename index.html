@@ -26,8 +26,8 @@
                 <input type="text" name="valor-produto" id="valor-produto" placeholder="Valor Do Produto">
             </div>
             <div class="card-btns">
-                <button>Adicionar</button>
-                <button>Deletar</button>
+                <button onclick="produto.salvar()">Salvar</button>
+                <button onclick="produto.cancelar()">Cancelar</button>
             </div>
         </div>
         <div class="table">
@@ -38,7 +38,8 @@
                     <th>Valor</th>
                     <th>Ações</th>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
+                    <!--
                     <tr>
                         <td>1</td>
                         <td>Computador Gamer</td>
@@ -48,6 +49,7 @@
                             <img src="https://cdn-icons.flaticon.com/png/512/3138/premium/3138336.png?token=exp=1658266390~hmac=eef2d7e07c0cc951f99482e2d1c25756" alt="Deletar">
                         </td>
                     </tr>
+                -->
                 </tbody>
             </table>
         </div>
