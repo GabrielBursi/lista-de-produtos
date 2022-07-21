@@ -8,8 +8,27 @@ class Produtos{
        let produto = this.lerDados()
        if(this.isEmpty(produto)){
         this.adicionaArray(produto)
-        console.log(this.arrayProdutos)
        }
+       this.listaTabela()
+    }
+
+    listaTabela(){
+        let tbody = document.getElementById("tbody")
+        tbody.innerHTML = ""
+        
+        for(let i=0; i<this.arrayProdutos.length; i++){
+            let tr = tbody.insertRow()
+
+            let td_id = tr.insertCell()
+            let td_produto = tr.insertCell()
+            let td_valor = tr.insertCell()
+            let td_acoes = tr.insertCell()
+
+            td_id.innerHTML = this.arrayProdutos[i].id
+            td_produto.innerHTML = this.arrayProdutos[i].nomeProduto
+            td_valor.innerHTML = this.arrayProdutos[i].valorProduto
+            
+        }
     }
 
     adicionaArray(produto){
