@@ -49,6 +49,7 @@ class Produtos{
     }
 
     adicionaArray(produto){
+        produto.valorProduto = parseFloat(produto.valorProduto)
         this.arrayProdutos.push(produto)
         this.id++
     }
