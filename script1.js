@@ -1,5 +1,6 @@
 class Produtos{
     constructor(){
+
         this.id=1
         this.arrayProdutos=[]
         this.editId=null
@@ -7,7 +8,9 @@ class Produtos{
 
     salvar(){
        let produto = this.lerDados()
+
        if(this.isEmpty(produto)){
+
         if(this.editId==null){
             this.adicionaArray(produto)
         }else{
@@ -15,11 +18,13 @@ class Produtos{
         }
         
        }
+
        this.listaTabela()
        this.cancelar()
     }
 
     listaTabela(){
+
         let tbody = document.getElementById("tbody")
         tbody.innerHTML = ""
 
@@ -49,12 +54,14 @@ class Produtos{
     }
 
     adicionaArray(produto){
+
         produto.valorProduto = parseFloat(produto.valorProduto)
         this.arrayProdutos.push(produto)
         this.id++
     }
 
     atualizar(id, produto){
+
         for(var i=0; i < this.arrayProdutos.length; i++){
             if(this.arrayProdutos[i].id == id){
                 this.arrayProdutos[i].nomeProduto = produto.nomeProduto
@@ -74,6 +81,7 @@ class Produtos{
     }
 
     isEmpty(produto){
+
         let msg = ""
         if(produto.nomeProduto == ""){
             msg+= "Informe o nome do produto!\n"
@@ -89,6 +97,7 @@ class Produtos{
     }
 
     cancelar(){
+
         document.getElementById("nome-produto").value = ""
         document.getElementById("valor-produto").value = ""
 
@@ -97,6 +106,7 @@ class Produtos{
     }
     
     editar(dados){
+
         this.editId = dados.id
 
         document.getElementById("nome-produto").value=dados.nomeProduto
@@ -106,6 +116,7 @@ class Produtos{
     }
 
     deletar(id){
+        
         if(confirm(`Tem certeza que quer realmente excluir esse produto: ${id} ?`)){
             let tbody = document.getElementById("tbody")
 
