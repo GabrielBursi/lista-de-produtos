@@ -15,7 +15,7 @@ class Produtos{
     listaTabela(){
         let tbody = document.getElementById("tbody")
         tbody.innerHTML = ""
-        
+
         for(let i=0; i<this.arrayProdutos.length; i++){
             let tr = tbody.insertRow()
 
@@ -28,6 +28,14 @@ class Produtos{
             td_produto.innerHTML = this.arrayProdutos[i].nomeProduto
             td_valor.innerHTML = this.arrayProdutos[i].valorProduto
             
+            let iconEdit = document.createElement('img')
+            iconEdit.src = "https://cdn-icons.flaticon.com/png/512/4103/premium/4103111.png?token=exp=1658266431~hmac=c65e680c4bf9158bc9236efe33f1d888"
+
+            let iconDel = document.createElement("img")
+            iconDel.src = "https://cdn-icons.flaticon.com/png/512/3138/premium/3138336.png?token=exp=1658266390~hmac=eef2d7e07c0cc951f99482e2d1c25756"
+
+            td_acoes.appendChild(iconEdit)
+            td_acoes.appendChild(iconDel)
         }
     }
 
