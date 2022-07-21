@@ -34,6 +34,7 @@ class Produtos{
 
             let iconDel = document.createElement("img")
             iconDel.src = "https://cdn-icons.flaticon.com/png/512/3138/premium/3138336.png?token=exp=1658266390~hmac=eef2d7e07c0cc951f99482e2d1c25756"
+            iconDel.setAttribute("onclick","produto.deletar("+this.arrayProdutos[i].id+")")
 
             td_acoes.appendChild(iconEdit)
             td_acoes.appendChild(iconDel)
@@ -77,6 +78,18 @@ class Produtos{
     
     editar(){
 
+    }
+
+    deletar(id){
+        //alert(`${id}`)
+        let tbody = document.getElementById("tbody")
+
+        for(var i=0; i < this.arrayProdutos.length; i++){
+            if(this.arrayProdutos[i].id == id){
+                this.arrayProdutos.splice(i, 1)
+                tbody.deleteRow(i)
+            }
+        }
     }
 }
 var produto = new Produtos();
