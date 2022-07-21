@@ -10,6 +10,7 @@ class Produtos{
         this.adicionaArray(produto)
        }
        this.listaTabela()
+       this.cancelar()
     }
 
     listaTabela(){
@@ -70,7 +71,8 @@ class Produtos{
     }
 
     cancelar(){
-        
+        document.getElementById("nome-produto").value = ""
+        document.getElementById("valor-produto").value = ""
     }
     
     editar(){
